@@ -1,0 +1,64 @@
+@import '../core/variables';
+
+.toggle-menu {
+	background-color: $Dark-Gray-1;
+	width: pxToRem(250px);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	padding-inline: pxToRem(25px);
+	opacity: 1;
+	transition: all 0.5s ease;
+
+	.toggle-menu-logo {
+		max-width: 131px;
+	}
+
+	.toggle-menu-logo,
+	h3,
+	button,
+	section {
+		margin-top: pxToRem(30px);
+	}
+
+	h3 {
+		font-size: pxToRem($Small-FS);
+		letter-spacing: 2px;
+		color: $Dark-Gray-3;
+		font-weight: 500;
+		text-transform: uppercase;
+	}
+
+	button {
+		color: $White;
+		font-family: $DefaultFont;
+		background-color: $Dark-Orange;
+		border: none;
+		font-size: pxToRem($Medium-FS);
+		border-radius: pxToRem(4px);
+		padding: pxToRem(12px) pxToRem(40px);
+		min-width: pxToRem(202px);
+		cursor: pointer;
+
+		&:hover {
+			background-color: $Light-Orange;
+		}
+	}
+
+	.toggle-menu-theme {
+		margin-top: auto;
+		margin-bottom: pxToRem(25px);
+	}
+
+	.error {
+		color: white;
+		line-height: pxToRem(30px);
+		background-color: rgba($Light-Gray-5, 0.05);
+		padding: pxToRem(5px);
+	}
+}
+
+.hide {
+	display: none;
+	opacity: 0;
+}

@@ -1,0 +1,99 @@
+@import '../core/variables';
+
+.toolbar {
+	background-color: $Dark-Gray-2;
+	max-height: pxToRem(56px);
+	display: flex;
+	gap: pxToRem(30px);
+	align-items: center;
+	width: 100%;
+
+	.toolbar--info {
+		display: flex;
+		align-items: center;
+		gap: pxToRem(10px);
+
+		input {
+			background-color: $Dark-Gray-2;
+			border: none;
+			color: $White;
+			font-family: $DefaultFont;
+			outline: none;
+		}
+	}
+
+	// Icon Styling
+	.menu {
+		background-color: $Dark-Gray-3;
+		width: pxToRem(56px);
+		height: pxToRem(56px);
+		display: flex;
+		&:hover {
+			background-color: $Dark-Gray-1;
+		}
+		img {
+			display: block;
+			margin: auto;
+			max-width: pxToRem(23px);
+			cursor: pointer;
+		}
+	}
+
+	.save {
+		background-color: $Dark-Orange;
+		border-radius: pxToRem(4px);
+		width: pxToRem(40px);
+		height: pxToRem(40px);
+		margin-right: pxToRem(30px);
+		display: flex;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $Light-Orange;
+		}
+		img {
+			display: block;
+			margin: auto;
+		}
+	}
+	.delete {
+		margin-left: auto;
+		cursor: pointer;
+		&:hover {
+			filter: brightness(60%);
+		}
+	}
+
+	@media (min-width: $Tablet) {
+		.delete {
+			margin-left: auto;
+		}
+		.save {
+			width: pxToRem(152px);
+
+			&:after {
+				content: 'Save Changes';
+				color: white;
+				position: relative;
+				top: 11px;
+				left: -10px;
+			}
+		}
+		.toolbar--info {
+			position: relative;
+			&:before {
+				content: 'Document Name';
+				position: absolute;
+				color: $Light-Gray-1;
+				font-size: $Body-FS;
+				top: pxToRem(-8px);
+				left: pxToRem(25px);
+			}
+		}
+
+		input {
+			position: relative;
+			top: pxToRem(5px);
+		}
+	}
+}

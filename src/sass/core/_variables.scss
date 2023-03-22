@@ -1,0 +1,35 @@
+@use 'sass:math';
+// Project Variables
+
+// Fonts
+$Editor-Font: 'Roboto Mono', monospace;
+$Preview-Font: 'Roboto Slab', serif;
+$DefaultFont: 'Roboto', sans-serif;
+
+// Colors
+$Black: #151619;
+$Dark-Gray-1: #1d1f22;
+$Dark-Gray-2: #2b2d31;
+$Dark-Gray-3: #35393f;
+$Light-Gray-1: #5a6069;
+$Light-Gray-2: #7c8187;
+$Light-Gray-3: #c1c4cb;
+$Light-Gray-4: #e4e4e4;
+$Light-Gray-5: #f5f5f5;
+$White: #ffffff;
+$Dark-Orange: #e46643;
+$Light-Orange: #f39765;
+
+// Font Sizes
+$Body-FS: 13px;
+$Medium-FS: 15px;
+$Small-FS: 14px;
+
+// Sneaking in a mixin
+@function pxToRem($pxValue) {
+	@return math.div($pxValue, 16px) * 1rem;
+}
+
+// Breakpoints
+$Tablet: 768px;
+$Desktop: 1080px;

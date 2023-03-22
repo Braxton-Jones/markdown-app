@@ -1,0 +1,69 @@
+@import '../core/variables';
+
+body {
+	min-height: 100vh;
+	font-family: $DefaultFont;
+}
+
+.app-wrapper {
+	display: flex;
+	min-height: 100vh;
+}
+
+.wrapper {
+	width: 100%;
+	height: auto;
+}
+
+.user-mode {
+	display: flex;
+	background-color: $Light-Gray-5;
+	justify-content: space-between;
+	padding-inline: pxToRem(14px);
+	min-height: pxToRem(42px);
+	align-items: center;
+
+	h2 {
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		font-size: $Small-FS;
+		font-weight: 500;
+		color: $Light-Gray-2;
+	}
+
+	img {
+		cursor: pointer;
+	}
+
+	.user-mode-desktop {
+		display: none;
+	}
+
+	.user-mode-mobile {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	@media (min-width: $Tablet) {
+		.user-mode-desktop {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			width: 100%;
+
+			div {
+				border-left: 3px solid $Light-Gray-4;
+				padding-left: pxToRem(10px);
+				display: flex;
+				justify-content: space-between;
+			}
+		}
+		.fullscreen {
+			grid-template-columns: 1fr;
+		}
+
+		.user-mode-mobile {
+			display: none;
+		}
+	}
+}

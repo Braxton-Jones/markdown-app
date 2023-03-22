@@ -1,0 +1,135 @@
+.editor {
+	height: 100%;
+
+	.editor-split,
+	.editor-split-fullscreen {
+		display: none;
+	}
+
+	.editor-markdown {
+		padding: pxToRem(20px) pxToRem(20px) pxToRem(40px) pxToRem(20px);
+		textarea {
+			border: none;
+			font-family: $Editor-Font;
+			line-height: pxToRem(24px);
+			resize: none;
+			outline: none;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+	}
+
+	.editor-preview {
+		font-family: $Preview-Font;
+		line-height: auto;
+		font-weight: 800;
+		padding: pxToRem(20px) pxToRem(20px) pxToRem(40px) pxToRem(20px);
+
+		// Markdown Styling Overwrite
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin: pxToRem(20px) 0;
+		}
+		h1 {
+			font-size: pxToRem(32px);
+		}
+
+		h2 {
+			font-weight: 300;
+			font-size: pxToRem(28px);
+		}
+
+		h3 {
+			font-size: pxToRem(24px);
+		}
+
+		h4 {
+			font-size: pxToRem(20px);
+		}
+
+		h5 {
+			font-size: pxToRem(16px);
+		}
+
+		h6 {
+			font-size: pxToRem(14px);
+			color: $Dark-Orange;
+		}
+
+		p,
+		ul,
+		ol {
+			font-weight: 500;
+			font-size: pxToRem(14px);
+			line-height: pxToRem(24px);
+			color: $Light-Gray-2;
+		}
+
+		li {
+			margin-left: pxToRem(30px);
+			padding-left: pxToRem(10px);
+		}
+
+		blockquote {
+			background-color: $Light-Gray-5;
+			padding: pxToRem(20px);
+			margin-top: pxToRem(15px);
+			p {
+				font-weight: 800;
+				color: $Dark-Gray-3;
+			}
+		}
+
+		pre {
+			background-color: $Light-Gray-5;
+			font-size: pxToRem(14px);
+			line-height: pxToRem(24px);
+			font-weight: 500;
+			margin: pxToRem(20px) 0;
+			padding: pxToRem(20px);
+		}
+
+		code {
+			color: $Dark-Gray-3;
+		}
+	}
+
+	@media (min-width: $Tablet) {
+		.editor-mobile {
+			display: none;
+		}
+
+		.editor-split {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			height: 100%;
+
+			.editor-markdown {
+				border-right: 3px solid #e4e4e4;
+			}
+		}
+		.fullscreen {
+			grid-template-columns: 1fr;
+			padding-inline: pxToRem(40px);
+
+			.editor-markdown {
+				display: none;
+			}
+
+			.editor-preview {
+				width: 100%;
+				height: 100%;
+				padding: 0;
+				padding-top: pxToRem(40px);
+				margin: auto;
+				max-width: pxToRem(872px);
+				border: none;
+			}
+		}
+	}
+}

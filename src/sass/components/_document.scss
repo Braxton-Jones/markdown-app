@@ -1,0 +1,35 @@
+@import '../core/variables';
+.document {
+	display: flex;
+	align-items: center;
+	margin-bottom: pxToRem(20px);
+	cursor: pointer;
+	padding: pxToRem(2px);
+	border-radius: 5%;
+	&:hover {
+		background-color: rgba($color: grey, $alpha: 0.4);
+	}
+
+	img {
+		padding: pxToRem(15px);
+		padding-left: 0;
+	}
+	.document-time {
+		font-size: $Body-FS;
+		color: $Light-Gray-2;
+		font-weight: 300;
+	}
+
+	.document-title {
+		font-size: $Medium-FS;
+		color: $White;
+		margin-top: pxToRem(5px);
+	}
+}
+.active {
+	background-color: rgba($color: grey, $alpha: 0.4);
+	.document-title {
+		color: $Dark-Orange;
+		font-weight: 500;
+	}
+}

@@ -8,7 +8,7 @@ function ToggleMenu(props) {
     		"title":"new-document.md",
     		"content": "Start Typing!"
 }
-		const response = await fetch('http://localhost:4000/api/documents/', {
+		const response = await fetch('https://markdown-api.onrender.com/', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',

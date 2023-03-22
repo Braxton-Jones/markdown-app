@@ -13,7 +13,7 @@ const [documents, setDocuments] = useState([]);
 
 useEffect(() => {
 	const fetchDocuments = async () => {
-		const response = await fetch('http://localhost:4000/api/documents/');
+		const response = await fetch('https://markdown-api.onrender.com/');
 		const json = await response.json();
 		setDocuments(json);
 	};

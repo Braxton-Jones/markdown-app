@@ -19,7 +19,7 @@ function Toolbar(props) {
 	}
 
 	const handleDocumentDelete = async (id) => {
-		const response = await fetch(`http://localhost:4000/api/documents/${id}`, {
+		const response = await fetch(`https://markdown-api.onrender.com/${id}`, {
 			method: 'DELETE',
 		});
 		props.setDocuments((orginalDocuments)=>{
@@ -40,16 +40,13 @@ async function handleDocumentSave(id) {
 		title: props.currentTitle,
 		content: props.currentContent,
 	};
-	const response = await fetch(
-		`http://localhost:4000/api/documents/${id}`,
-		{
-			method: 'PATCH',
-			body: JSON.stringify(edit),
-			headers: {
-				'Content-Type': 'application/json',
-			},
+	const response = await fetch(`https://markdown-api.onrender.com/${id}`, {
+		method: 'PATCH',
+		body: JSON.stringify(edit),
+		headers: {
+			'Content-Type': 'application/json',
 		},
-	);
+	});
 	props.setDocuments((prevDocuments) => {
 		return prevDocuments.map((document) => {
 			if (document._id === id) {

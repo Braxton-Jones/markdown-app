@@ -6,7 +6,7 @@ import Toolbar from './components/Toolbar';
 import Editor from './components/Editor';
 import show from './assets/icon-show-preview.svg';
 import hide from './assets/icon-hide-preview.svg';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
 const [documents, setDocuments] = useState([]);

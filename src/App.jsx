@@ -30,7 +30,10 @@ Markdown is a lightweight markup language that you can use to add formatting ele
 ## How to use this?
 
 1. Write markdown in the markdown editor window
-2. See the rendered markdown in the preview window`);
+2. See the rendered markdown in the preview window
+
+*Note* This is a full-stack project using a node.js backend that takes a second to wake after being asleep so please allow a few moments on initial load!
+`);
 	const [currentTitle, setCurrentTitle] = useState('welcome.md');
 	const [currentId, setCurrentId] = useState('');
 	const [toggleMenu, setToggleMenu] = useState(false);
@@ -96,6 +99,7 @@ Markdown is a lightweight markup language that you can use to add formatting ele
 											isToggleActive={toggleMenu}
 											id={currentId}
 											setDocuments={setDocuments}
+											setActiveDoc={setActiveDoc}
 										/>
 										<div className='user-mode'>
 											<div className='user-mode-mobile'>

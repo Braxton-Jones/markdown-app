@@ -5,16 +5,19 @@ import close from '../assets/icon-close.svg';
 import deleteimg from '../assets/icon-delete.svg';
 import save from '../assets/icon-save.svg';
 import toast, { Toaster } from 'react-hot-toast';
+import { useState } from 'react';
 
 function Toolbar(props) {
+	const [isSaving, setIsSaving] = useState(false)
 
 	function setNewContext(){
 		if(props.documents.length === 0){
 
 		}
-		props.setCurrentTitle(props.documents[0].title);
-		props.setCurrentContent(props.documents[0].content)
-		props.setCurrentId(props.documents[0].id)
+		props.setCurrentTitle("");
+		props.setCurrentContent("")
+		props.setCurrentId("")
+		
 
 	}
 
@@ -26,6 +29,8 @@ function Toolbar(props) {
 			return orginalDocuments.filter((document)=> document._id !== id)
 		});
 		setNewContext()
+		
+
 		toast('Document Deleted ✔️');
 	};
 
@@ -36,6 +41,7 @@ function Toolbar(props) {
 
 
 async function handleDocumentSave(id) {
+	setIsSaving(true)
 	const edit = {
 		title: props.currentTitle,
 		content: props.currentContent,
@@ -57,6 +63,7 @@ async function handleDocumentSave(id) {
 		});
 	});
 	toast('Document Saved ✔️');
+	setIsSaving(false)
 }
 
 return (<>
@@ -83,6 +90,7 @@ return (<>
 		/>
 		<div className='save' onClick={() => handleDocumentSave(props.id)}>
 			<img src={save}/>
+			<p>{isSaving ? "Saving..." : "Save Changes"  }</p>
 		</div>
 	</div>
 </>);

@@ -53,7 +53,8 @@
 		}
 		img {
 			display: block;
-			margin: auto;
+			margin: pxToRem(15px);
+			padding-right: pxToRem(5px);
 		}
 	}
 	.delete {
@@ -70,14 +71,17 @@
 		}
 		.save {
 			width: pxToRem(152px);
+			align-items: center;
+			color: white;
+			position: relative;
 
-			&:after {
-				content: 'Save Changes';
-				color: white;
+			p{
 				position: relative;
-				top: 11px;
-				left: -10px;
+				left: pxToRem(-10px);
+				font-size: pxToRem(15px);
 			}
+
+		
 		}
 		.toolbar--info {
 			position: relative;

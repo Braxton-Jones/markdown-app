@@ -74,7 +74,6 @@ Your personal Markdown editor should now be running. You can access it in your w
 Make sure to configure the following environment variables in your `.env` file:
 
 - `MONGO_URI`: The connection URL for your MongoDB database.
-- `JWT_SECRET`: A secret key for JSON Web Token (JWT) generation.
 - `PORT`: The port on which the server will run (default is 5000).
 - `CLIENT_URL`: The URL of your client application (e.g., `http://localhost:3000` in development).
 

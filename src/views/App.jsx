@@ -1,11 +1,11 @@
-import './sass/app.scss';
+import '../sass/app.scss';
 import { useState, useEffect} from 'react';
 import Document from '../components/Document';
 import ToggleMenu from '../components/ToggleMenu';
 import Toolbar from '../components/Toolbar';
 import Editor from '../components/Editor';
-import show from './assets/icon-show-preview.svg';
-import hide from './assets/icon-hide-preview.svg';
+import show from '../assets/icon-show-preview.svg';
+import hide from '../assets/icon-hide-preview.svg';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -32,14 +32,19 @@ Markdown is a lightweight markup language that you can use to add formatting ele
 1. Write markdown in the markdown editor window
 2. See the rendered markdown in the preview window
 
-Our project uses the free plan from render.com, which may result in longer loading times, especially after periods of inactivity. We appreciate your understanding and patience.
+Our project uses the free plan from render.com, 
+which may result in longer loading times, 
+especially after periods of inactivity. 
+We appreciate your understanding and patience, 
+and we are actively working to optimize the performance. 
+If you have any questions or concerns, please feel free to reach out to us.
 `);
 	const [currentTitle, setCurrentTitle] = useState('welcome.md');
 	const [currentId, setCurrentId] = useState('');
 	const [toggleMenu, setToggleMenu] = useState(false);
 	const [togglePreview, setTogglePreview] = useState(false);
 	const [toggleFullScreen, setToggleFullScreen] = useState(true);
-	const [isActiveDoc, setActiveDoc] = useState(false)
+	const [isActiveDoc, setActiveDoc] = useState(false) // TODO: Add this
 
 
 	// Toggles Toggle Menu

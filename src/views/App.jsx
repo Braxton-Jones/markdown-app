@@ -1,9 +1,9 @@
 import './sass/app.scss';
 import { useState, useEffect} from 'react';
-import Document from './components/Document';
-import ToggleMenu from './components/ToggleMenu';
-import Toolbar from './components/Toolbar';
-import Editor from './components/Editor';
+import Document from '../components/Document';
+import ToggleMenu from '../components/ToggleMenu';
+import Toolbar from '../components/Toolbar';
+import Editor from '../components/Editor';
 import show from './assets/icon-show-preview.svg';
 import hide from './assets/icon-hide-preview.svg';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
@@ -32,7 +32,7 @@ Markdown is a lightweight markup language that you can use to add formatting ele
 1. Write markdown in the markdown editor window
 2. See the rendered markdown in the preview window
 
-*Note* This is a full-stack project using a node.js backend that takes a second to wake after being asleep so please allow a few moments on initial load!
+Our project uses the free plan from render.com, which may result in longer loading times, especially after periods of inactivity. We appreciate your understanding and patience.
 `);
 	const [currentTitle, setCurrentTitle] = useState('welcome.md');
 	const [currentId, setCurrentId] = useState('');
@@ -44,7 +44,7 @@ Markdown is a lightweight markup language that you can use to add formatting ele
 
 	// Toggles Toggle Menu
 	function handleToggleClick() {
-		setToggleMenu(!toggleMenu);
+		setToggleMenu(!toggleMenu); 
 	}
 
 	// Toggles Mobile Preview

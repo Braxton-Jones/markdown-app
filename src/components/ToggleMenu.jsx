@@ -10,7 +10,7 @@ function ToggleMenu(props) {
     		"title":"new-document.md",
     		"content": "Start Typing!"
 }
-		const response = await fetch('https://markdown-api.onrender.com/', {
+		const response = await fetch('https://fair-ruby-chimpanzee-wig.cyclic.app/', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',

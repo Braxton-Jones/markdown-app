@@ -31,12 +31,6 @@ Markdown is a lightweight markup language that you can use to add formatting ele
 
 1. Write markdown in the markdown editor window
 2. See the rendered markdown in the preview window
-
-
-Our project uses the free plan from render.com, 
-which may result in longer loading times, 
-especially after periods of inactivity. 
-We appreciate your understanding and patience.
 `);
 	const [currentTitle, setCurrentTitle] = useState('welcome.md');
 	const [currentId, setCurrentId] = useState('');

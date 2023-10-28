@@ -22,7 +22,7 @@ function Toolbar(props) {
 	}
 
 	const handleDocumentDelete = async (id) => {
-		const response = await fetch(`https://markdown-api.onrender.com/${id}`, {
+		const response = await fetch(`https://fair-ruby-chimpanzee-wig.cyclic.app/${id}`, {
 			method: 'DELETE',
 		});
 		props.setDocuments((orginalDocuments)=>{
@@ -46,7 +46,7 @@ async function handleDocumentSave(id) {
 		title: props.currentTitle,
 		content: props.currentContent,
 	};
-	const response = await fetch(`https://markdown-api.onrender.com/${id}`, {
+	const response = await fetch(`https://fair-ruby-chimpanzee-wig.cyclic.app/${id}`, {
 		method: 'PATCH',
 		body: JSON.stringify(edit),
 		headers: {

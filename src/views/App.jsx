@@ -13,7 +13,7 @@ const [documents, setDocuments] = useState([]);
 
 useEffect(() => {
 	const fetchDocuments = async () => {
-		const response = await fetch('https://markdown-api.onrender.com/');
+		const response = await fetch('https://fair-ruby-chimpanzee-wig.cyclic.app/');
 		const json = await response.json();
 		setDocuments(json);
 	};

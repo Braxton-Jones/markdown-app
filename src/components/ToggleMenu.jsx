@@ -31,18 +31,18 @@ function ToggleMenu(props) {
 	useEffect(() => {
 		if(props.isToggleActive){
 			gsap.to(toggleMenuRef.current, {
-				duration: 0.1, 
+				duration: .3, 
 				x: 0,
-				display: "block",
+				display: "flex",
 				opacity: 1
 				
 			})
-		} else{
-			gsap.to(toggleMenuRef.current, {
-				duration: 0.8, 
+		} 
+		else{
+			gsap.to(toggleMenuRef.current, { 
 				x: -300,
+				opacity: 0,
 				display: "none",
-				opacity: 0
 			})
 		
 		}

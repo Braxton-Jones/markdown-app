@@ -1,9 +1,28 @@
 import ReactMarkdown from 'react-markdown';
+import { useEffect,useRef} from 'react';
+import { gsap } from 'gsap/gsap-core';
 
 function Editor(props) {
+const editorRef = useRef(null)
 function handleContentChange(e){
 props.setCurrentContent(e.target.value)
 }
+useEffect(() => {
+	if(props.isToggleMenuActive){
+		gsap.to(editorRef.current, {
+			duration: 0.1, 
+			x: 0,
+			
+		})
+	} else{
+		gsap.to(editorRef.current, {
+			duration: 0.4, 
+			x: -250,
+		})
+	
+	}
+
+},[props.isToggleMenuActive])
 
 	return (
 		<section className='editor'>

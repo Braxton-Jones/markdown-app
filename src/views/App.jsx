@@ -1,5 +1,5 @@
 import '../sass/app.scss';
-import { useState, useEffect} from 'react';
+import { useState, useEffect, useRef} from 'react';
 import Document from '../components/Document';
 import ToggleMenu from '../components/ToggleMenu';
 import Toolbar from '../components/Toolbar';
@@ -7,9 +7,12 @@ import Editor from '../components/Editor';
 import show from '../assets/icon-show-preview.svg';
 import hide from '../assets/icon-hide-preview.svg';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { gsap } from 'gsap';
+
 
 function App() {
 const [documents, setDocuments] = useState([]);
+
 
 useEffect(() => {
 	const fetchDocuments = async () => {
@@ -37,7 +40,7 @@ Markdown is a lightweight markup language that you can use to add formatting ele
 	const [toggleMenu, setToggleMenu] = useState(false);
 	const [togglePreview, setTogglePreview] = useState(false);
 	const [toggleFullScreen, setToggleFullScreen] = useState(true);
-	const [isActiveDoc, setActiveDoc] = useState(false) // TODO: Add this
+	const [isActiveDoc, setActiveDoc] = useState(false)
 
 
 	// Toggles Toggle Menu
@@ -53,6 +56,7 @@ Markdown is a lightweight markup language that you can use to add formatting ele
 	function handlePreviewFullScreen() {
 		setToggleFullScreen(!toggleFullScreen);
 	}
+
 	return (
 		<BrowserRouter>
 			<Routes>
@@ -144,6 +148,7 @@ Markdown is a lightweight markup language that you can use to add formatting ele
 										isPreviewActive={togglePreview}
 										onToggleFullScreen={setToggleFullScreen}
 										toggleFullScreen={!toggleFullScreen}
+										isToggleMenuActive={toggleMenu}
 									/>
 								</div>
 							</section>

@@ -56,6 +56,10 @@
 			margin: pxToRem(15px);
 			padding-right: pxToRem(5px);
 		}
+
+		p{
+			display: none;
+		}
 	}
 	.delete {
 		margin-left: auto;
@@ -79,6 +83,7 @@
 				position: relative;
 				left: pxToRem(-10px);
 				font-size: pxToRem(15px);
+				display: block;
 			}
 
 		

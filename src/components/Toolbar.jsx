@@ -5,9 +5,12 @@ import close from '../assets/icon-close.svg';
 import deleteimg from '../assets/icon-delete.svg';
 import save from '../assets/icon-save.svg';
 import toast, { Toaster } from 'react-hot-toast';
-import { useState } from 'react';
+import { useState, useEffect, useRef} from 'react';
+import { gsap } from 'gsap';
+
 
 function Toolbar(props) {
+	const toolbarRef = useRef(null);
 	const [isSaving, setIsSaving] = useState(false)
 
 	function setNewContext(){
@@ -65,6 +68,7 @@ async function handleDocumentSave(id) {
 	toast('Document Saved ✔️');
 	setIsSaving(false)
 }
+
 
 return (<>
 <Toaster/>

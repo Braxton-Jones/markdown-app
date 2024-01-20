@@ -1,7 +1,7 @@
 # Personal Markdown Editor - MERN Stack
 ## Overview
 
-This is a personal Markdown editor I created using the MERN (MongoDB, Express.js, React, Node.js) stack. It provides a user-friendly interface for creating and editing Markdown documents. Markdown is a lightweight markup language that allows you to format plain text using easy-to-read and easy-to-write syntax. This project enables you to write and preview Markdown content in real-time.
+This is a personal Markdown editor I created using the MERN (MongoDB, Express.js, React, Node.js) stack. It provides a user-friendly interface for creating and editing Markdown documents. Markdown is a lightweight markup language that allows you to format plain text using easy-to-read and easy-to-write syntax. This project enables you to write and preview Markdown content in real-time. My motivation for making it was to see if i could make it, to be honest. I learned how use other libraries in my code as making my own real time text to markdown functionality would have made this project take forever to complete. It was also made using MERN Stack. If i had more time with this project I would make the Markdown Files sperate by user instead of a "community" folder. My focus was on learning how it would work, not making it a viable SAAS.  
 
 ### Features
 
@@ -92,4 +92,3 @@ This personal project is licensed under the MIT License. You have full control o
 
 - Thanks to the MERN stack and open-source contributors for the tools and libraries used in this project.
 
-Enjoy using your personal Markdown editor! 📝✨
